@@ -1,0 +1,15 @@
+pre {
+  font-family: Consolas, sans-serif;
+}
+
+input,
+button {
+  font-family: Poppins, sans-serif;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid #f44336;
+}

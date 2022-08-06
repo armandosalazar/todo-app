@@ -1,1 +1,34 @@
-<p>register-form works!</p>
+<h2>Register</h2>
+
+<pre>
+  {{ registerForm.value | json }}
+</pre>
+
+<form
+  [formGroup]="registerForm"
+  (submit)="sendCredentials()">
+  <input
+    formControlName="name"
+    placeholder="Name"
+    type="text">
+  <br>
+  <input
+    formControlName="lastName"
+    placeholder="Last Name"
+    type="text">
+  <br>
+  <input
+    formControlName="email"
+    placeholder="Email"
+    type="email">
+  <br>
+  <input
+    formControlName="password"
+    placeholder="Password"
+    type="password">
+  <br>
+  <button
+    type="submit">Register</button>
+  <br>
+  <a routerLink="/auth">Login</a>
+</form>
