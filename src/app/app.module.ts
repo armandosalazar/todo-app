@@ -12,13 +12,10 @@ import { HomeChildTwoComponent } from './home-child-two/home-child-two.component
     AppComponent,
     HomeComponent,
     HomeChildOneComponent,
-    HomeChildTwoComponent
+    HomeChildTwoComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

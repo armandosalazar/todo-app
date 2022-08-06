@@ -5,9 +5,7 @@ import { TaskRoutingModule } from './task-routing.module';
 import { TaskPageComponent } from './page/task-page.component';
 
 @NgModule({
-  declarations: [
-    TaskPageComponent
-  ],
+  declarations: [TaskPageComponent],
   imports: [CommonModule, TaskRoutingModule],
 })
 export class TaskModule {}
