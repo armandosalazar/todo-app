@@ -1,1 +1,1 @@
-export interface RoleInterface {}
+export interface roleinterface {}

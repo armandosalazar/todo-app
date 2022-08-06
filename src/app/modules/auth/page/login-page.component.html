@@ -1,4 +1,21 @@
-<p>login-page works!</p>
-<div>
-  NickName: {{ value }}
-</div>
+<h2>Login</h2>
+
+<pre>{{loginForm.value | json}}</pre>
+
+<form
+  [formGroup]="loginForm"
+  (submit)="sendCredentials()">
+  <input
+    formControlName="email"
+    placeholder="Email"
+    type="text">
+  <br>
+  <input
+    formControlName="password"
+    placeholder="Password"
+    type="password">
+  <br>
+  <button
+    [disabled]="loginForm.invalid"
+    type="submit">Login</button>
+</form>

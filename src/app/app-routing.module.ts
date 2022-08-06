@@ -27,6 +27,9 @@ const routes: Routes = [
     path: 'task', // TODO: http://localhost:4200/task && private
     loadChildren: () => import('@modules/task/task.module').then((m) => m.TaskModule),
     canActivate: [ValidateSessionGuard]
+  }, {
+    path: '**',
+    redirectTo: ''
   }
 ];
 
