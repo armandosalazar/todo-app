@@ -1,0 +1,17 @@
+header {
+  background-color: #242424;
+  color: rgb(175, 170, 230);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+h1 {
+  margin-left: 20px;
+}
+
+a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,34 +1,32 @@
-<h2>Register</h2>
+<div class="container">
+  <h2>Register</h2>
 
-<pre>
-  {{ registerForm.value | json }}
-</pre>
+  <pre>{{ registerForm.value | json }}</pre>
 
-<form
-  [formGroup]="registerForm"
-  (submit)="sendCredentials()">
-  <input
-    formControlName="name"
-    placeholder="Name"
-    type="text">
-  <br>
-  <input
-    formControlName="lastName"
-    placeholder="Last Name"
-    type="text">
-  <br>
-  <input
-    formControlName="email"
-    placeholder="Email"
-    type="email">
-  <br>
-  <input
-    formControlName="password"
-    placeholder="Password"
-    type="password">
-  <br>
-  <button
-    type="submit">Register</button>
-  <br>
-  <a routerLink="/auth">Login</a>
-</form>
+  <form [formGroup]="registerForm" (submit)="sendCredentials()">
+    <input formControlName="name" placeholder="Name" type="text" />
+    <br />
+    <input formControlName="lastName" placeholder="Last Name" type="text" />
+    <br />
+    <input formControlName="email" placeholder="Email" type="email" />
+    <br />
+    <input formControlName="password" placeholder="Password" type="password" />
+    <br />
+    <input
+      formControlName="passwordConfirm"
+      placeholder="Confirm password"
+      type="password"
+    />
+    <br />
+    <button
+      [disabled]="registerForm.invalid || registerForm.pending"
+      type="submit"
+    >
+      Register
+    </button>
+    <br />
+    <a routerLink="/auth/login">Login</a>
+  </form>
+  <button (click)="testLoaded()">Load data</button>
+  <button (click)="testUpload()">Update data</button>
+</div>

@@ -6,7 +6,7 @@ import { RegisterFormComponent } from '@modules/auth/components/register-form/re
 const routes: Routes = [
   // TODO: http://locahost:3000/auth/
   {
-    path: '',
+    path: 'login',
     component: LoginPageComponent,
   },
   {

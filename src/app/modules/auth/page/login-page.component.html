@@ -1,24 +1,15 @@
-<h2>Login</h2>
+<div class="container">
+  <h2>Login</h2>
 
-<pre>{{ loginForm.value | json }}</pre>
+  <pre>{{ loginForm.value | json }}</pre>
 
-<form
-  [formGroup]="loginForm"
-  (submit)="sendCredentials()">
-  <input
-    formControlName="email"
-    placeholder="Email"
-    type="text"/>
-  <br/>
-  <input
-    formControlName="password"
-    placeholder="Password"
-    type="password"/>
-  <br/>
-  <button
-    [disabled]="loginForm.invalid"
-    type="submit">Login
-  </button>
-  <br>
-  <a routerLink="/auth/register">Register</a>
-</form>
+  <form [formGroup]="loginForm" (submit)="sendCredentials()">
+    <input formControlName="email" placeholder="Email" type="text" />
+    <br />
+    <input formControlName="password" placeholder="Password" type="password" />
+    <br />
+    <button [disabled]="loginForm.invalid" type="submit">Login</button>
+    <br />
+    <a routerLink="/auth/register">Register</a>
+  </form>
+</div>

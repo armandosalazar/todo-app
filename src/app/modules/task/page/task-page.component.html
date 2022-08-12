@@ -1,1 +1,39 @@
-<p>task-page works!</p>
+<app-header></app-header>
+<!-- Directiva estructural -->
+<span (click)="changeText()">Cambiar</span>
+<div *ngIf="showText">HOLA MUNDO</div>
+<ul *ngIf="menu.length > 0; else tplNotFound">
+  <li
+    *ngFor="
+      let item of menu;
+      let i = index;
+      let primero = first;
+      let ultimo = last;
+      let par = even;
+      let impar = odd
+    "
+    [ngClass]="{ par: par, other: false }"
+    class="{{ par ? 'active' : '' }}"
+    [style.font-weight]="'default'"
+  >
+    {{ item }} - {{ i }} - {{ primero }} - {{ ultimo }} - {{ par }} -
+    {{ impar }}
+  </li>
+</ul>
+<ng-template #tplNotFound>
+  <strong>No hay elementos</strong>
+</ng-template>
+<br />
+<!-- ng-container -->
+<ng-container *ngTemplateOutlet="tplHello"></ng-container>
+<ng-template #tplHello> Mi usuario es @armandosalazar </ng-template>
+<div class="padre" [ngSwitch]="case">
+  <div *ngSwitchCase="1" class="hijo">Hola soy Pedro</div>
+  <div *ngSwitchCase="2" class="hijo">Hola soy Maria</div>
+  <div *ngSwitchCase="3" class="hijo">Hola soy Pedro y Maria</div>
+  <div *ngSwitchDefault>Opción por defecto</div>
+</div>
+
+<div>
+  <img appImgBroken src="www.imgaes.jpg" alt="" />
+</div>

@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ValidateSessionGuard implements CanActivate {
-  private cookie?: string | undefined;
+  private cookie?: string | undefined = '';
 
   constructor(private router: Router) {}
 

@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { TaskRoutingModule } from './task-routing.module';
 import { TaskPageComponent } from './page/task-page.component';
+import { HeaderComponent } from './components/header/header.component';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
-  declarations: [TaskPageComponent],
-  imports: [CommonModule, TaskRoutingModule],
+  declarations: [TaskPageComponent, HeaderComponent],
+  imports: [CommonModule, TaskRoutingModule, SharedModule],
 })
 export class TaskModule {}
